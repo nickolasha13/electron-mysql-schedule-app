@@ -1,0 +1,29 @@
+{
+  "name": "electron-mysql-schedule-app",
+  "version": "1.0.0",
+  "description": "university schedule app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickolasha13/electron-mysql-schedule-app.git"
+  },
+  "keywords": [
+    "sql",
+    "electron",
+    "js",
+    "mysql"
+  ],
+  "author": "Mykola Bilous",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickolasha13/electron-mysql-schedule-app/issues"
+  },
+  "homepage": "https://github.com/nickolasha13/electron-mysql-schedule-app#readme",
+  "devDependencies": {
+    "electron": "^27.1.2"
+  }
+}
