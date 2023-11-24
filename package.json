@@ -25,5 +25,11 @@
   "homepage": "https://github.com/nickolasha13/electron-mysql-schedule-app#readme",
   "devDependencies": {
     "electron": "^27.1.2"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "jquery": "^3.7.1",
+    "mysql2": "^3.6.5",
+    "path": "^0.12.7"
   }
 }

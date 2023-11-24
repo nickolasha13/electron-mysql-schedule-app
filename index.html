@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-  </body>
+<head>
+    <title>My App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My App</h1>
+    <button id="loadTables">Load Tables</button>
+    <div id="tables"></div>
+
+    <script>
+        document.getElementById('loadTables').addEventListener('click', function() {
+            window.database.getTables().then((tables) => {
+                let tablesDiv = document.getElementById('tables');
+                tablesDiv.innerHTML = '';
+                tables.forEach((table) => {
+                    let p = document.createElement('p');
+                    p.textContent = table.Tables_in_my_db;
+                    tablesDiv.appendChild(p);
+                });
+            }).catch((error) => {
+                console.error(error);
+            });
+        });
+    </script>
+</body>
 </html>
